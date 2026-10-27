@@ -5,8 +5,8 @@ export function GalleryRing({
   artworks = [],
   activeIndex = 0,
   onSelectArtwork,
-  radius = 6.8,
-  frameHeight = 2.2,
+  radius = 5.0,
+  frameHeight = 1.85,
 }) {
   const frames = useMemo(() => {
     const total = artworks.length || 10;
@@ -14,7 +14,8 @@ export function GalleryRing({
       const angle = (index / total) * Math.PI * 2;
       const x = Math.sin(angle) * radius;
       const z = Math.cos(angle) * radius;
-      const rotY = angle + Math.PI; // Face toward origin (0, 0, 0)
+      // Frame front face (+Z) points outward towards the camera orbit:
+      const rotY = angle;
 
       return {
         artwork,

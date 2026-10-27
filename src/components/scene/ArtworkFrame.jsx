@@ -198,7 +198,7 @@ export function ArtworkFrame({
             <meshBasicMaterial
               map={texture}
               toneMapped={false}
-              side={THREE.FrontSide}
+              side={THREE.DoubleSide}
             />
           ) : (
             <meshStandardMaterial
@@ -208,16 +208,16 @@ export function ArtworkFrame({
           )}
         </mesh>
 
-        {/* Front Protective Glass Sheen */}
-        <mesh position={[0, 0, 0.048]}>
+        {/* Front Protective Glass Sheen (Subtle Specular Shine) */}
+        <mesh position={[0, 0, 0.046]}>
           <planeGeometry args={[frameWidth, frameHeight]} />
-          <meshPhysicalMaterial
-            color="#CBD8E2"
-            transmission={0.92}
-            roughness={0.06}
-            reflectivity={0.6}
+          <meshStandardMaterial
+            color="#FFFFFF"
+            roughness={0.1}
+            metalness={0.1}
             transparent
-            opacity={0.2}
+            opacity={0.05}
+            side={THREE.DoubleSide}
           />
         </mesh>
 

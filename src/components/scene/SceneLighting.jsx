@@ -7,69 +7,71 @@ export function SceneLighting({ activeIndex = 0 }) {
   const penguinLightRef = useRef();
 
   useFrame((state) => {
-    // Subtle breathing intensity for lights
     const time = state.clock.getElapsedTime();
     if (penguinLightRef.current) {
-      penguinLightRef.current.intensity = 2.4 + Math.sin(time * 1.5) * 0.2;
+      // Gentle breathing glow on penguin
+      penguinLightRef.current.intensity = 4.2 + Math.sin(time * 2.0) * 0.4;
     }
   });
 
   return (
     <group>
-      {/* Soft Ambient Cool Arctic Glow */}
-      <ambientLight color="#213E58" intensity={0.9} />
+      {/* Radiant Cool Arctic Ambient Light */}
+      <ambientLight color="#99C8EA" intensity={1.5} />
 
-      {/* Directional Skylight from Upper Dome */}
+      {/* Main Celestial Sun / Skylight */}
       <directionalLight
-        position={[10, 20, 15]}
-        intensity={1.2}
-        color="#CBD8E2"
+        position={[8, 18, 10]}
+        intensity={2.2}
+        color="#FFFFFF"
         castShadow
         shadow-mapSize-width={2048}
         shadow-mapSize-height={2048}
-        shadow-camera-near={0.5}
-        shadow-camera-far={50}
-        shadow-camera-left={-15}
-        shadow-camera-right={15}
-        shadow-camera-top={15}
-        shadow-camera-bottom={-15}
         shadow-bias={-0.0005}
       />
 
-      {/* Opposite Fill Light for Balanced Contrast */}
+      {/* Secondary Soft Fill Light from opposite direction */}
       <directionalLight
-        position={[-12, 10, -10]}
-        intensity={0.6}
+        position={[-10, 12, -8]}
+        intensity={1.2}
         color="#8FBAD8"
       />
 
-      {/* Warm Champagne Spotlight on the Central Penguin */}
+      {/* Strong Warm Champagne Gold Spotlight focused directly on the Penguin */}
       <spotLight
         ref={penguinLightRef}
-        position={[0, 8, 2]}
-        target-position={[0, 0.8, 0]}
-        color="#D3B47B"
-        intensity={2.6}
-        angle={0.55}
-        penumbra={0.8}
-        distance={15}
+        position={[0, 8, 2.5]}
+        target-position={[0, 1.0, 0]}
+        color="#FFE2A8"
+        intensity={4.5}
+        angle={0.65}
+        penumbra={0.6}
+        distance={16}
         castShadow
       />
 
-      {/* Under-glow for Pedestal & Ice Reflections */}
+      {/* Soft Rim Light behind Penguin for sharp character silhouette */}
       <pointLight
-        position={[0, -0.5, 0]}
-        color="#8FBAD8"
-        intensity={1.8}
+        position={[0, 2.8, -2.5]}
+        color="#FCFCFA"
+        intensity={2.5}
         distance={8}
       />
 
-      {/* Rim light from behind to carve character silhouette */}
+      {/* Radiant Pedestal Underglow */}
       <pointLight
-        position={[0, 3, -4]}
-        color="#FCFCFA"
-        intensity={1.5}
-        distance={10}
+        position={[0, 0.2, 0]}
+        color="#70B5E8"
+        intensity={3.0}
+        distance={7}
+      />
+
+      {/* Center Warm Hearth Light */}
+      <pointLight
+        position={[0, 2.2, 1.2]}
+        color="#F0D7A7"
+        intensity={1.8}
+        distance={6}
       />
     </group>
   );
