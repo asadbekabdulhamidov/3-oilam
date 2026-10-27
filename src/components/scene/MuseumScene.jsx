@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import { SceneLighting } from './SceneLighting';
@@ -21,6 +21,8 @@ function CameraRig({
   const targetLookAt = useRef(new THREE.Vector3(0, 1.2, 0));
 
   useFrame((state, delta) => {
+    const time = state.clock.getElapsedTime();
+
     // 1. Determine camera target position & lookAt target based on state
     if (selectedArtwork) {
       // Zoom into selected artwork
@@ -29,28 +31,28 @@ function CameraRig({
       const frameX = Math.sin(angle) * galleryRadius;
       const frameZ = Math.cos(angle) * galleryRadius;
       
-      // Position camera 3.0 units away from frame along the radial line
+      // Position camera 3.0 units away from frame facing it
       const camRadius = galleryRadius - 3.2;
       targetCamPos.current.set(
-        Math.sin(angle) * camRadius,
-        2.2,
+        Math.sin(angle) * camRadius + pointer.x * 0.15,
+        2.2 + pointer.y * 0.15,
         Math.cos(angle) * camRadius
       );
       targetLookAt.current.set(frameX, 2.2, frameZ);
     } else if (!hasEntered) {
-      // Hero Entrance Overview
+      // Hero Entrance Overview - gentle breathing float
       targetCamPos.current.set(
-        pointer.x * 0.8,
-        4.8 + pointer.y * 0.4,
+        pointer.x * 0.8 + Math.sin(time * 0.4) * 0.3,
+        4.8 + pointer.y * 0.4 + Math.cos(time * 0.5) * 0.15,
         11.5
       );
       targetLookAt.current.set(0, 1.2, 0);
     } else if (progress >= 0.95) {
-      // Closing Cinematic Scene
+      // Closing Cinematic Scene - wide majestic view of the entire gallery
       targetCamPos.current.set(
-        0,
-        4.5,
-        9.2
+        pointer.x * 0.5,
+        4.6 + pointer.y * 0.3,
+        9.5
       );
       targetLookAt.current.set(0, 1.4, 0);
     } else {
@@ -59,11 +61,11 @@ function CameraRig({
       const scrollIndex = (progress / 0.95) * totalArtworks;
       const angle = (scrollIndex / totalArtworks) * Math.PI * 2;
       
-      // Camera orbits inside the frame circle at radius ~3.4
-      const camRadius = 3.4;
-      const camX = Math.sin(angle) * camRadius + pointer.x * 0.3;
+      // Camera orbits inside the frame circle at radius 3.5
+      const camRadius = 3.5;
+      const camX = Math.sin(angle) * camRadius + pointer.x * 0.35;
       const camZ = Math.cos(angle) * camRadius;
-      const camY = 2.1 + pointer.y * 0.2;
+      const camY = 2.1 + pointer.y * 0.25;
 
       // Target frame point (ahead on the circle)
       const lookAngle = angle;
@@ -101,7 +103,7 @@ export function MuseumScene({
           antialias: true,
           powerPreference: 'high-performance',
           toneMapping: THREE.ACESFilmicToneMapping,
-          toneMappingExposure: 1.1,
+          toneMappingExposure: 1.15,
         }}
       >
         {/* Deep Arctic Fog for Natural Depth */}

@@ -13,6 +13,16 @@ export function GalleryHUD({
 }) {
   if (!hasEntered || isClosing || !activeArtwork) return null;
 
+  const handlePrev = () => {
+    const prev = (activeIndex - 1 + totalArtworks) % totalArtworks;
+    onJumpToIndex(prev);
+  };
+
+  const handleNext = () => {
+    const next = (activeIndex + 1) % totalArtworks;
+    onJumpToIndex(next);
+  };
+
   return (
     <div className="fixed inset-x-0 bottom-6 md:bottom-8 z-30 px-6 md:px-12 flex flex-col items-center pointer-events-none transition-all duration-500">
       {/* Active Artwork Presentation Card */}
@@ -29,9 +39,27 @@ export function GalleryHUD({
             </span>
           </div>
 
-          <span className="font-editorial italic text-xs text-[#CBD8E2]/80">
-            {activeArtwork.date}
-          </span>
+          <div className="flex items-center gap-2">
+            <span className="font-editorial italic text-xs text-[#CBD8E2]/80">
+              {activeArtwork.date}
+            </span>
+            <div className="flex items-center gap-1 ml-2">
+              <button
+                onClick={handlePrev}
+                className="p-1 rounded-md border border-[#CBD8E2]/20 hover:border-[#D3B47B] text-[#CBD8E2] hover:text-[#D3B47B] transition-colors"
+                title="Previous Moment"
+              >
+                <ChevronLeft className="w-3.5 h-3.5" />
+              </button>
+              <button
+                onClick={handleNext}
+                className="p-1 rounded-md border border-[#CBD8E2]/20 hover:border-[#D3B47B] text-[#CBD8E2] hover:text-[#D3B47B] transition-colors"
+                title="Next Moment"
+              >
+                <ChevronRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </div>
         </div>
 
         {/* Artwork Title & Inspect Action */}
