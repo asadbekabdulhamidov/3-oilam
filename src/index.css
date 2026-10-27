@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-obsidian: #101719;
+    --color-midnight: #101E30;
+    --color-arctic: #213E58;
+    --color-glacier: #8FBAD8;
+    --color-ivory: #F5F1E9;
+    --color-silver: #CBD8E2;
+    --color-gold: #D3B47B;
+    --color-snow: #FCFCFA;
+  }
+
+  html {
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #101719;
+    color: #F5F1E9;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #101719;
+    color: #F5F1E9;
+    overflow-x: hidden;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+}
+
+/* Typography Utility Classes */
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-display {
+  font-family: 'Cinzel', 'Cormorant Garamond', serif;
+}
+
+.font-ui {
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Custom Luxury Gradients & Glows */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FCFCFA 0%, #D3B47B 50%, #B89255 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ice-gradient-text {
+  background: linear-gradient(135deg, #FCFCFA 0%, #CBD8E2 40%, #8FBAD8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(211, 180, 123, 0.25);
+}
+
+.ice-glow {
+  box-shadow: 0 0 35px rgba(143, 186, 216, 0.2);
+}
+
+/* Subtle glassmorphism */
+.luxury-glass {
+  background: rgba(16, 30, 48, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(203, 216, 226, 0.12);
+}
+
+.luxury-glass-gold {
+  background: rgba(16, 23, 25, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(211, 180, 123, 0.25);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #101719;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(211, 180, 123, 0.35);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(211, 180, 123, 0.7);
+}
+
+/* Animated subtle pulse for museum markers */
+@keyframes goldPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.animate-gold-pulse {
+  animation: goldPulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

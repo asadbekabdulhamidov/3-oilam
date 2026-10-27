@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="15" stdDeviation="20" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <!-- Background with luxurious gradient -->
+  <rect width="800" height="600" fill="#101e30" />
+  <rect width="800" height="600" fill="url(#bgGrad6)" />
+  <defs>
+    <linearGradient id="bgGrad6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e1722"/>
+      <stop offset="60%" stop-color="#182e44"/>
+      <stop offset="100%" stop-color="#2a4c6c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Artwork Scene Content -->
+  
+      <!-- Cozy Hearth Fireplace -->
+      <rect x="250" y="240" width="300" height="260" rx="12" fill="#090c10" stroke="#D3B47B" stroke-width="2" opacity="0.6" />
+      <!-- Amber fire flames -->
+      <radialGradient id="fire" cx="50%" cy="80%" r="60%">
+        <stop offset="0%" stop-color="#fff2b3" />
+        <stop offset="40%" stop-color="#f59e0b" />
+        <stop offset="80%" stop-color="#b45309" />
+        <stop offset="100%" stop-color="#090c10" stop-opacity="0" />
+      </radialGradient>
+      <circle cx="400" cy="400" r="90" fill="url(#fire)" />
+      <!-- Three cups on the mantelpiece -->
+      <rect x="330" y="225" width="22" height="18" rx="3" fill="#D3B47B" />
+      <rect x="390" y="222" width="24" height="22" rx="3" fill="#8FBAD8" />
+      <rect x="450" y="228" width="16" height="14" rx="2" fill="#FCFCFA" />
+      <!-- Heart motif in the warm embers -->
+      <path d="M400 370 C390 350 360 355 360 380 C360 405 400 425 400 425 C400 425 440 405 440 380 C440 355 410 350 400 370 Z" fill="#FCFCFA" opacity="0.4" />
+    
+
+  <!-- Luxury Gallery Matting & Fine Golden Inset Border -->
+  <rect x="25" y="25" width="750" height="550" fill="none" stroke="#CBD8E2" stroke-width="1" opacity="0.3" />
+  <rect x="35" y="35" width="730" height="530" fill="none" stroke="#D3B47B" stroke-width="0.75" opacity="0.5" />
+  
+  <!-- Subtle Corner Embellishments -->
+  <path d="M30 45 L45 45 L45 30" stroke="#D3B47B" stroke-width="1.5" fill="none" />
+  <path d="M770 45 L755 45 L755 30" stroke="#D3B47B" stroke-width="1.5" fill="none" />
+  <path d="M30 555 L45 555 L45 570" stroke="#D3B47B" stroke-width="1.5" fill="none" />
+  <path d="M770 555 L755 555 L755 570" stroke="#D3B47B" stroke-width="1.5" fill="none" />
+
+  <!-- Exhibition Title Plaque at Bottom -->
+  <g transform="translate(400, 530)" text-anchor="middle">
+    <rect x="-160" y="-20" width="320" height="36" rx="4" fill="#0b1219" fill-opacity="0.85" stroke="#D3B47B" stroke-width="1" />
+    <text y="-2" fill="#D3B47B" font-family="'Cinzel', Georgia, serif" font-size="11" letter-spacing="3" font-weight="600">07 / CHAPTER VII</text>
+    <text y="11" fill="#F5F1E9" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" letter-spacing="1" font-weight="500">FAMILY TIME</text>
+  </g>
+</svg>

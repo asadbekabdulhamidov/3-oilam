@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="15" stdDeviation="20" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <!-- Background with luxurious gradient -->
+  <rect width="800" height="600" fill="#101e30" />
+  <rect width="800" height="600" fill="url(#bgGrad0)" />
+  <defs>
+    <linearGradient id="bgGrad0" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e1722"/>
+      <stop offset="60%" stop-color="#182e44"/>
+      <stop offset="100%" stop-color="#2a4c6c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Artwork Scene Content -->
+  
+      <!-- Deep winter garden with golden lantern & couple silhouette -->
+      <radialGradient id="lantern" cx="50%" cy="40%" r="50%">
+        <stop offset="0%" stop-color="#fff8db" stop-opacity="0.9" />
+        <stop offset="35%" stop-color="#e0b870" stop-opacity="0.5" />
+        <stop offset="100%" stop-color="#101e30" stop-opacity="0" />
+      </radialGradient>
+      <circle cx="400" cy="320" r="280" fill="url(#lantern)" />
+      <!-- Starry sky -->
+      <g fill="#f5f1e9" opacity="0.6">
+        <circle cx="120" cy="100" r="1.5" /><circle cx="280" cy="80" r="2" />
+        <circle cx="560" cy="140" r="1.5" /><circle cx="680" cy="90" r="2.5" />
+        <circle cx="720" cy="220" r="1.5" /><circle cx="200" cy="240" r="1.5" />
+      </g>
+      <!-- Mountain & Trees Silhouettes -->
+      <path d="M0 450 L180 340 L360 470 L540 330 L720 440 L800 370 L800 600 L0 600 Z" fill="#080e14" opacity="0.85" />
+      <!-- Couple silhouette -->
+      <path d="M370 420 Q370 360 385 360 Q400 360 400 420 L405 490 L365 490 Z" fill="#0a1017" />
+      <circle cx="385" cy="345" r="16" fill="#0a1017" />
+      <path d="M410 425 Q410 370 425 370 Q440 370 440 425 L445 490 L405 490 Z" fill="#0a1017" />
+      <circle cx="425" cy="355" r="14" fill="#0a1017" />
+      <!-- Subtle blue scarf accent -->
+      <path d="M380 365 Q395 370 415 368 Q425 385 410 395" stroke="#8FBAD8" stroke-width="4" stroke-linecap="round" fill="none" />
+      <!-- Golden snow dust -->
+      <g fill="#D3B47B" opacity="0.5">
+        <circle cx="350" cy="380" r="3" /><circle cx="440" cy="340" r="2" />
+        <circle cx="390" cy="310" r="2.5" /><circle cx="420" cy="400" r="3" />
+      </g>
+    
+
+  <!-- Luxury Gallery Matting & Fine Golden Inset Border -->
+  <rect x="25" y="25" width="750" height="550" fill="none" stroke="#CBD8E2" stroke-width="1" opacity="0.3" />
+  <rect x="35" y="35" width="730" height="530" fill="none" stroke="#D3B47B" stroke-width="0.75" opacity="0.5" />
+  
+  <!-- Subtle Corner Embellishments -->
+  <path d="M30 45 L45 45 L45 30" stroke="#D3B47B" stroke-width="1.5" fill="none" />
+  <path d="M770 45 L755 45 L755 30" stroke="#D3B47B" stroke-width="1.5" fill="none" />
+  <path d="M30 555 L45 555 L45 570" stroke="#D3B47B" stroke-width="1.5" fill="none" />
+  <path d="M770 555 L755 555 L755 570" stroke="#D3B47B" stroke-width="1.5" fill="none" />
+
+  <!-- Exhibition Title Plaque at Bottom -->
+  <g transform="translate(400, 530)" text-anchor="middle">
+    <rect x="-160" y="-20" width="320" height="36" rx="4" fill="#0b1219" fill-opacity="0.85" stroke="#D3B47B" stroke-width="1" />
+    <text y="-2" fill="#D3B47B" font-family="'Cinzel', Georgia, serif" font-size="11" letter-spacing="3" font-weight="600">01 / CHAPTER I</text>
+    <text y="11" fill="#F5F1E9" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" letter-spacing="1" font-weight="500">A BEAUTIFUL BEGINNING</text>
+  </g>
+</svg>

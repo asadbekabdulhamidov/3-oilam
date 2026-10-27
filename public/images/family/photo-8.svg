@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="15" stdDeviation="20" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <!-- Background with luxurious gradient -->
+  <rect width="800" height="600" fill="#101e30" />
+  <rect width="800" height="600" fill="url(#bgGrad7)" />
+  <defs>
+    <linearGradient id="bgGrad7" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e1722"/>
+      <stop offset="60%" stop-color="#182e44"/>
+      <stop offset="100%" stop-color="#2a4c6c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Artwork Scene Content -->
+  
+      <!-- Coastal seaside under golden sky -->
+      <ellipse cx="400" cy="200" rx="120" ry="120" fill="#D3B47B" opacity="0.3" filter="blur(20px)" />
+      <!-- Rolling sea waves in arctic & navy blues -->
+      <path d="M0 380 Q200 350 400 390 T800 370 L800 600 L0 600 Z" fill="#112739" />
+      <path d="M0 430 Q200 410 400 440 T800 420 L800 600 L0 600 Z" fill="#1b3d58" opacity="0.9" />
+      <path d="M0 480 Q200 460 400 490 T800 470 L800 600 L0 600 Z" fill="#245070" opacity="0.8" />
+      <!-- Flying seagulls in golden air -->
+      <path d="M220 220 Q235 210 250 220 Q265 210 280 220" stroke="#FCFCFA" stroke-width="2.5" fill="none" opacity="0.8" />
+      <path d="M520 180 Q532 172 545 180 Q558 172 570 180" stroke="#FCFCFA" stroke-width="2" fill="none" opacity="0.7" />
+    
+
+  <!-- Luxury Gallery Matting & Fine Golden Inset Border -->
+  <rect x="25" y="25" width="750" height="550" fill="none" stroke="#CBD8E2" stroke-width="1" opacity="0.3" />
+  <rect x="35" y="35" width="730" height="530" fill="none" stroke="#D3B47B" stroke-width="0.75" opacity="0.5" />
+  
+  <!-- Subtle Corner Embellishments -->
+  <path d="M30 45 L45 45 L45 30" stroke="#D3B47B" stroke-width="1.5" fill="none" />
+  <path d="M770 45 L755 45 L755 30" stroke="#D3B47B" stroke-width="1.5" fill="none" />
+  <path d="M30 555 L45 555 L45 570" stroke="#D3B47B" stroke-width="1.5" fill="none" />
+  <path d="M770 555 L755 555 L755 570" stroke="#D3B47B" stroke-width="1.5" fill="none" />
+
+  <!-- Exhibition Title Plaque at Bottom -->
+  <g transform="translate(400, 530)" text-anchor="middle">
+    <rect x="-160" y="-20" width="320" height="36" rx="4" fill="#0b1219" fill-opacity="0.85" stroke="#D3B47B" stroke-width="1" />
+    <text y="-2" fill="#D3B47B" font-family="'Cinzel', Georgia, serif" font-size="11" letter-spacing="3" font-weight="600">08 / CHAPTER VIII</text>
+    <text y="11" fill="#F5F1E9" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" letter-spacing="1" font-weight="500">A DAY TO REMEMBER</text>
+  </g>
+</svg>

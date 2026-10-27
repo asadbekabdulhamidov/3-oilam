@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="15" stdDeviation="20" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <!-- Background with luxurious gradient -->
+  <rect width="800" height="600" fill="#101e30" />
+  <rect width="800" height="600" fill="url(#bgGrad5)" />
+  <defs>
+    <linearGradient id="bgGrad5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e1722"/>
+      <stop offset="60%" stop-color="#182e44"/>
+      <stop offset="100%" stop-color="#2a4c6c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Artwork Scene Content -->
+  
+      <!-- Footsteps in pure snow landscape -->
+      <path d="M0 380 Q400 320 800 380 L800 600 L0 600 Z" fill="#CBD8E2" opacity="0.15" />
+      <!-- Parent big footsteps -->
+      <ellipse cx="320" cy="460" rx="14" ry="24" fill="#0c1722" transform="rotate(-15 320 460)" />
+      <ellipse cx="440" cy="420" rx="14" ry="24" fill="#0c1722" transform="rotate(15 440 420)" />
+      <!-- Child tiny footsteps in between -->
+      <ellipse cx="360" cy="485" rx="7" ry="12" fill="#D3B47B" transform="rotate(-5 360 485)" />
+      <ellipse cx="400" cy="455" rx="7" ry="12" fill="#D3B47B" transform="rotate(8 400 455)" />
+      <ellipse cx="380" cy="415" rx="7" ry="12" fill="#D3B47B" transform="rotate(-2 380 415)" />
+      <!-- Gentle horizon sunshine -->
+      <circle cx="400" cy="300" r="80" fill="#D3B47B" opacity="0.25" filter="blur(25px)" />
+    
+
+  <!-- Luxury Gallery Matting & Fine Golden Inset Border -->
+  <rect x="25" y="25" width="750" height="550" fill="none" stroke="#CBD8E2" stroke-width="1" opacity="0.3" />
+  <rect x="35" y="35" width="730" height="530" fill="none" stroke="#D3B47B" stroke-width="0.75" opacity="0.5" />
+  
+  <!-- Subtle Corner Embellishments -->
+  <path d="M30 45 L45 45 L45 30" stroke="#D3B47B" stroke-width="1.5" fill="none" />
+  <path d="M770 45 L755 45 L755 30" stroke="#D3B47B" stroke-width="1.5" fill="none" />
+  <path d="M30 555 L45 555 L45 570" stroke="#D3B47B" stroke-width="1.5" fill="none" />
+  <path d="M770 555 L755 555 L755 570" stroke="#D3B47B" stroke-width="1.5" fill="none" />
+
+  <!-- Exhibition Title Plaque at Bottom -->
+  <g transform="translate(400, 530)" text-anchor="middle">
+    <rect x="-160" y="-20" width="320" height="36" rx="4" fill="#0b1219" fill-opacity="0.85" stroke="#D3B47B" stroke-width="1" />
+    <text y="-2" fill="#D3B47B" font-family="'Cinzel', Georgia, serif" font-size="11" letter-spacing="3" font-weight="600">06 / CHAPTER VI</text>
+    <text y="11" fill="#F5F1E9" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" letter-spacing="1" font-weight="500">GROWING WITH LOVE</text>
+  </g>
+</svg>

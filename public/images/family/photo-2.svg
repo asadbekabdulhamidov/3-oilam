@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="15" stdDeviation="20" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <!-- Background with luxurious gradient -->
+  <rect width="800" height="600" fill="#101e30" />
+  <rect width="800" height="600" fill="url(#bgGrad1)" />
+  <defs>
+    <linearGradient id="bgGrad1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e1722"/>
+      <stop offset="60%" stop-color="#182e44"/>
+      <stop offset="100%" stop-color="#2a4c6c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Artwork Scene Content -->
+  
+      <!-- Warm golden bokeh portrait ambiance -->
+      <circle cx="400" cy="280" r="200" fill="#D3B47B" opacity="0.15" filter="blur(40px)" />
+      <circle cx="280" cy="350" r="140" fill="#8FBAD8" opacity="0.2" filter="blur(30px)" />
+      <!-- Elegant portrait silhouette with scarf -->
+      <path d="M350 490 C340 400 360 350 370 330 C350 310 350 270 370 240 C390 210 430 210 450 240 C470 270 470 310 450 330 C460 350 480 400 470 490 Z" fill="#090f14" />
+      <!-- Warm scarf in glacier blue -->
+      <path d="M375 325 Q410 345 445 325 Q455 370 435 390 Q400 380 385 350 Z" fill="#8FBAD8" opacity="0.9" />
+      <!-- Golden rim light on profile -->
+      <path d="M430 230 Q450 250 445 290 Q435 320 420 330" stroke="#D3B47B" stroke-width="3" fill="none" opacity="0.8" />
+    
+
+  <!-- Luxury Gallery Matting & Fine Golden Inset Border -->
+  <rect x="25" y="25" width="750" height="550" fill="none" stroke="#CBD8E2" stroke-width="1" opacity="0.3" />
+  <rect x="35" y="35" width="730" height="530" fill="none" stroke="#D3B47B" stroke-width="0.75" opacity="0.5" />
+  
+  <!-- Subtle Corner Embellishments -->
+  <path d="M30 45 L45 45 L45 30" stroke="#D3B47B" stroke-width="1.5" fill="none" />
+  <path d="M770 45 L755 45 L755 30" stroke="#D3B47B" stroke-width="1.5" fill="none" />
+  <path d="M30 555 L45 555 L45 570" stroke="#D3B47B" stroke-width="1.5" fill="none" />
+  <path d="M770 555 L755 555 L755 570" stroke="#D3B47B" stroke-width="1.5" fill="none" />
+
+  <!-- Exhibition Title Plaque at Bottom -->
+  <g transform="translate(400, 530)" text-anchor="middle">
+    <rect x="-160" y="-20" width="320" height="36" rx="4" fill="#0b1219" fill-opacity="0.85" stroke="#D3B47B" stroke-width="1" />
+    <text y="-2" fill="#D3B47B" font-family="'Cinzel', Georgia, serif" font-size="11" letter-spacing="3" font-weight="600">02 / CHAPTER II</text>
+    <text y="11" fill="#F5F1E9" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" letter-spacing="1" font-weight="500">A FAMILIAR SMILE</text>
+  </g>
+</svg>
